@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Generate Image
-        uses: croutonn/generate-og-image@1.0.6
+        uses: croutonn/generate-og-image@1.0.7
         env:
           GITHUB_TOKEN: ${{ secrets.GENERATE_OG_IMAGE }}
           GITHUB_CONTEXT: ${{ toJson(github) }}
