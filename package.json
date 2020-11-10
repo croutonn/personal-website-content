@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "add-post": "node scripts/add-post.js",
+    "remove-post": "node scripts/remove-post.js",
     "fix": "yarn fix:prettier && yarn fix:eslint",
     "fix:eslint": "eslint . --fix",
     "fix:prettier": "prettier --write .",
