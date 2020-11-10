@@ -1,0 +1,14 @@
+{
+  "name": "@croutonn/personal-website-content",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:croutonn/personal-website-content.git",
+  "author": "croutonn <croutonna@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@croutonn/text-lint-rule-preset-ja-tech-loose": "^0.2.0",
+    "prettier": "^2.1.2",
+    "textlint": "^11.7.6"
+  }
+}
