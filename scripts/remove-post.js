@@ -2,12 +2,14 @@
 
 const { resolve, join } = require("path")
 
+const chalk = require("chalk")
+
 const { BRANCH_PREFIX, DEFAULT_BRANCH, POSTS_DIR } = require("./lib/constants")
 const {
+  branchExists,
   checkout,
   deleteBranch,
   getCurrentBranch,
-  branchExists,
 } = require("./lib/git")
 const { confirm } = require("./lib/input")
 const rm = require("./lib/rm")
@@ -19,7 +21,7 @@ const postsDirPath = resolve(__dirname, `../${POSTS_DIR}`)
  * @returns {Promise<void>}
  */
 const run = async (basename) => {
-  const yes = await confirm(`Remove ${basename}`)
+  const yes = await confirm(`Remove "${basename}"`)
   if (!yes) {
     process.exit(1)
   }
@@ -34,6 +36,7 @@ const run = async (basename) => {
 
   const postDir = join(postsDirPath, basename)
   await rm(postDir)
+  console.log(`${chalk.green("success")} "\${basename}" was removed`)
 }
 
 // checking argv

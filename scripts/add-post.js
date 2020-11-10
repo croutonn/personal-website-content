@@ -3,6 +3,8 @@
 const { promises: fs } = require("fs")
 const { resolve, join } = require("path")
 
+const chalk = require("chalk")
+
 const {
   BRANCH_PREFIX,
   DEFAULT_EXTENSION,
@@ -44,12 +46,20 @@ const run = async (basename, extension = DEFAULT_EXTENSION) => {
     const postFileExists = await exists(postFilePath)
     if (postFileExists) {
       console.log(
-        `"${POSTS_DIR}/${basename}/${fileName}" was not generated because it exists`
+        `${chalk.red(
+          "failure"
+        )} "${POSTS_DIR}/${basename}/${fileName}" ${chalk.gray(
+          "was not generated because it exists"
+        )}`
       )
       return
     }
     await fs.writeFile(postFilePath, content).then(() => {
-      console.log(`"${POSTS_DIR}/${basename}/${fileName}" was generated`)
+      console.log(
+        `${chalk.green(
+          "success"
+        )} "${POSTS_DIR}/${basename}/${fileName}" was generated`
+      )
     })
   })
 

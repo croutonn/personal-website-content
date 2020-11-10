@@ -16,6 +16,9 @@
     "lint:prettier": "prettier .",
     "lint:textlint": "textlint ./src"
   },
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
   "devDependencies": {
     "@croutonn/eslint-config": "^1.0.11",
     "@croutonn/textlint-rule-preset-ja-tech-loose": "^0.3.0",
