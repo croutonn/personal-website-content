@@ -1,5 +1,5 @@
 {
   "rules": {
-    "preset-ja-tech-loose": true
+    "@croutonn/preset-ja-tech-loose": true
   }
 }

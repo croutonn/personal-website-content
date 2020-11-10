@@ -2,12 +2,23 @@
   "name": "@croutonn/personal-website-content",
   "private": true,
   "version": "0.0.0",
-  "main": "index.js",
   "repository": "git@github.com:croutonn/personal-website-content.git",
   "author": "croutonn <croutonna@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "add-post": "node scripts/add-post.js",
+    "fix": "yarn fix:prettier && yarn fix:eslint",
+    "fix:eslint": "eslint . --fix",
+    "fix:prettier": "prettier --write .",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier .",
+    "lint:textlint": "textlint ./src"
+  },
   "devDependencies": {
-    "@croutonn/text-lint-rule-preset-ja-tech-loose": "^0.2.0",
+    "@croutonn/eslint-config": "^1.0.11",
+    "@croutonn/textlint-rule-preset-ja-tech-loose": "^0.3.0",
+    "eslint": "^7.13.0",
     "prettier": "^2.1.2",
     "textlint": "^11.7.6"
   }
