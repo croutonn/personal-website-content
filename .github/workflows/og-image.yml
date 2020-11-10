@@ -17,3 +17,5 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         with:
           path: src/images/post-images/
+          fontSize: 125%
+          headingSize: 3.2em
