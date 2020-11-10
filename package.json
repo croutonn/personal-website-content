@@ -11,7 +11,8 @@
     "fix": "yarn fix:prettier && yarn fix:eslint",
     "fix:eslint": "eslint . --fix",
     "fix:prettier": "prettier --write .",
-    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "fix:textlint": "textlint ./src --fix",
+    "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:textlint",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier .",
     "lint:textlint": "textlint ./src"
