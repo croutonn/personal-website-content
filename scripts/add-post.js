@@ -3,34 +3,20 @@
 const { promises: fs } = require("fs")
 const { resolve, join } = require("path")
 
+const {
+  BRANCH_PREFIX,
+  DEFAULT_EXTENSION,
+  LOCALES,
+  POST_TEMPLATE,
+  POSTS_DIR,
+} = require("./lib/constants")
 const exists = require("./lib/exists")
 const { checkout } = require("./lib/git")
 const mkdirp = require("./lib/mkdirp")
+const renderTemplate = require("./lib/render-template")
 
-const POST_TEMPLATE = "templates/post.md"
-const POSTS_DIR = "src/posts"
-const LOCALES = ["en", "ja"]
-const DEFAULT_EXTENSION = "md"
-const BRANCH_PREFIX = "posts/"
 const postTemplatePath = resolve(__dirname, `../${POST_TEMPLATE}`)
 const postsDirPath = resolve(__dirname, `../${POSTS_DIR}`)
-let templateCache = ""
-
-/**
- * @param {string} templatePath
- * @param {Object} variables
- */
-const renderTemplate = async (templatePath, variables) => {
-  if (!templateCache) {
-    templateCache = await fs.readFile(templatePath, { encoding: "utf-8" })
-  }
-  let variablesContext = ""
-  Object.keys(variables).forEach((variableName) => {
-    variablesContext += `const ${variableName} = "${variables[variableName]}";`
-  })
-  // eslint-disable-next-line no-eval
-  return eval(`${variablesContext}\`${templateCache}\``)
-}
 
 /**
  * @param {string} basename
