@@ -1,7 +1,7 @@
-name: 'Generate OG Images'
+name: Generate OG Images
 on:
   pull_request:
-    types: [opened,edited]
+    types: [opened, edited]
 
 jobs:
   generate_og_job:
