@@ -1,13 +1,13 @@
 ---
 author: croutonn
 title: こんにちは、世界！
-description: 
+description:
 tags: []
-publishedAt: ${datetime}
+publishedAt: 2020-11-17T15:48:05.181Z
 ogImage:
   title: あなたの知らないこと
   subtitle: 何かがあるに違いない
-  fileName: ${basename}.${locale}
+  fileName: hello-world.ja
   imageUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
   background: #fff
   fontColor: rgb(20, 20, 20)
