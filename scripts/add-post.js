@@ -34,6 +34,7 @@ const run = async (basename, extension = DEFAULT_EXTENSION) => {
   const variables = {
     basename,
     datetime: new Date().toISOString(),
+    author: process.env.BLOG_DEFAULT_AUTHOR,
   }
 
   const writeFileJobs = LOCALES.map(async (locale) => {

@@ -1,7 +1,9 @@
 ---
+author: ${author}
 title:
+description:
 tags: []
-createdAt: ${datetime}
+publishedAt: ${datetime}
 ogImage:
   title:
   subtitle:

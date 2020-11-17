@@ -6,7 +6,7 @@
   "author": "croutonn <croutonna@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "add-post": "node scripts/add-post.js",
+    "add-post": "dotenv -e .env.local node scripts/add-post.js",
     "remove-post": "node scripts/remove-post.js",
     "fix": "yarn fix:prettier && yarn fix:eslint",
     "fix:eslint": "eslint . --fix",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@croutonn/eslint-config": "^1.0.11",
     "@croutonn/textlint-rule-preset-ja-tech-loose": "^0.3.0",
+    "dotenv-cli": "^4.0.0",
     "eslint": "^7.13.0",
     "prettier": "^2.1.2",
     "textlint": "^11.7.6"
