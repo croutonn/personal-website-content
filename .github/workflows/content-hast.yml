@@ -1,0 +1,17 @@
+name: Generate HAST Resource
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  generate_hast_job:
+    runs-on: ubuntu-latest
+    name: Generate HAST Resource
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generate HAST Resource
+        uses: croutonn/generate-hast-resource@0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GENERATE_OG_IMAGE }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
