@@ -2,7 +2,7 @@
 author: croutonn
 title: こんにちは、世界！
 description:
-tags: []
+tags: [hello, world]
 publishedAt: 2020-11-17T15:48:05.181Z
 ogImage:
   title: あなたの知らないこと
