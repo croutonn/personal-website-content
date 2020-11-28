@@ -1,5 +1,0 @@
-exclude:
-  - main
-  - dev
-  - feature-*
-delete_closed_pr: true
